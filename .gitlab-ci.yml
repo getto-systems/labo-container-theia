@@ -173,12 +173,8 @@ release:
       - triggers
       - schedules
 
-  before_script:
-    - ./scripts/restore.sh
   script:
-    - npm test
     - curl $TRELLIS_CI_BUMP_VERSION/push_tags.sh | sh
-    - ./scripts/deploy.sh
 
 release_success:
   stage: release_notify

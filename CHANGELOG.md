@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version : 1.0.0
+
+- fix: gitlab-ci : See merge request getto-systems-base/labo/container/theia!8
+- production ready! : See merge request getto-systems-base/labo/container/theia!7
+
+
 ## Version : 0.1.1
 
 

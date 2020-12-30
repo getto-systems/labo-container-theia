@@ -1,4 +1,4 @@
-image: debian:buster
+image: getto/hangar:AfNMyZFOJMbXMPot-20201230040640
 
 stages:
   - image_build

@@ -29,7 +29,6 @@ image_build:
   variables:
     DOCKER_HOST: tcp://docker:2375/
     DOCKER_DRIVER: overlay2
-    DOCKER_CONTENT_TRUST: 1
 
   services:
     - docker:dind
@@ -119,7 +118,6 @@ image_push:
   variables:
     DOCKER_HOST: tcp://docker:2375/
     DOCKER_DRIVER: overlay2
-    DOCKER_CONTENT_TRUST: 1
 
   services:
     - docker:dind

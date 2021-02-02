@@ -41,6 +41,9 @@ image_build:
     - export image=image:$CI_COMMIT_SHORT_SHA
   script:
     - docker build -t $image .
+    - docker image save $image --output .build/image.tar
+    - gzip .build/image.tar
+    - chown 1000:1000 .build/image.tar.gz
 
 image_push:
   stage: image_push
@@ -65,6 +68,7 @@ image_push:
     - docker:dind
 
   before_script:
+    - apk update && apk add bash git curl
     - git config user.email admin@getto.systems
     - git config user.name getto
     - curl $TRELLIS_GIT_POST/setup.sh | sh -s -- ./vendor/getto-systems

@@ -1,7 +1,7 @@
 FROM node:12.20.0-buster
 
 RUN : && \
-  : "install packages" && \
+  : "install packages : 2021-02-02" && \
   apt-get update && \
   apt-get install -y \
     ripgrep \

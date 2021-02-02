@@ -23,6 +23,7 @@ image_build:
       - merge_requests
     changes:
       - Dockerfile
+      - resources/*
 
   image: docker:stable
 
@@ -54,6 +55,7 @@ image_test:
       - merge_requests
     changes:
       - Dockerfile
+      - resources/*
   needs:
     - image_build
 
@@ -110,6 +112,7 @@ image_push:
       - release@getto-systems-base/labo/container/theia
     changes:
       - Dockerfile
+      - resources/*
   except:
     refs:
       - schedules

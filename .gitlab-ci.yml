@@ -60,8 +60,6 @@ image_test:
     - image_build
 
   before_script:
-    - apt-get update
-    - apt-get install -y curl
     - curl $TRELLIS_HANGAR/load_trellis.sh | sh -s -- hangar latest install_trivy.sh | sh -s -- vendor
     - curl $TRELLIS_HANGAR/load_trellis.sh | sh -s -- hangar latest install_dockle.sh | sh -s -- vendor
   script:
